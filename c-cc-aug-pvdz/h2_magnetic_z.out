@@ -1,0 +1,322 @@
+Numba Threads is: 1
+----------------------------------------------------------------------------
+|                                                                          |
+|      QUEST - QUantum Electronic         .-------.                        |
+|              Structure Techniques     .///////////-                      |
+|                                      ://////////////-                    |
+|      (c) Teale Group, University     `//////////////: .::::-----`        |
+|          of Nottingham, UK             .///////////- -:::::::::::-`      |
+|            ````````                      ---------. :::::::::::::::-.    |
+|          .+ooooooooo+.                  /NMMMMNNNNm/`-::::::::::::::.    |
+|        -+oooooooooooo+-               `sMMMMMMMMMMMMm:`-:::::::::::-     |
+|      -+oooooooooooooooo/             -mMMMMMMMMMMMMMMMd:`--------:-      |
+|     `+ooooooooooooooooo:`.:::::::::-`:mMMMMMMMMMMMMMMMMh                 |
+|      `+oooooooooooooo+.`:////////////-`sMMMMMMMMMMMMMMy                  |
+|       `+ooooooooooo+- -///////////////:`:mMMMMMMMMMMMy                   |
+|        `:::::::::::`.///////////////////-`+sssssssss+                    |
+|                     `///////////////////.                                |
+|                      `/////////////////`                                 |
+|                        ://///////////:                                   |
+|                         :///////////-                                    |
+|      All rights reserved.                                    ver 2020.1  |
+----------------------------------------------------------------------------
+
+Data Files
+----------
+Input method file: hf_z.inp
+Input molecule file: h2.mol
+Input basis file: cc-pvdz.bas
+Output file: h2_magnetic_z.out
+
+
+Machine
+-------
+Machine Type: x86_64
+64 bit: True
+Machine Name: login-5.saga
+Processor: x86_64
+Number of Cores: 104
+
+Operating System
+----------------
+OS System: Linux
+OS Release: 3.10.0-1160.6.1.el7.x86_64
+
+Python
+------
+Python Compiler: GCC 7.5.0
+Python Build: default Jun  4 2021 15:09:15
+Python Implementation: CPython
+Python Version: 3.8.10
+
+Package Versions
+----------------
+Numpy Version No.  : 1.20.2
+Scipy Version No.  : 1.6.2
+Numba Version No.  : 0.53.1
+H5py Version No.  : 3.2.1
+Platform Version No.  : 1.0.8
+ 
+Calculation Started on: Sun, 03 Oct 2021 23:05:24
+ 
+
+Method Input
+------------
+@QUEST
+method = SCF 
+spin constraint = Restricted
+mkl threads = 1
+@Integrals
+one elec integrals = fast
+eri integrals = fast
+basis set = spherical
+ene_conv = 1.0e-20
+@SCF
+guess type = SAD
+diis type = C1-DIIS
+@London
+#origin = (0.0,0.0,0.0) 
+field = (0.0,0.0,0.117525878379355)
+archive
+@Property
+Dipole
+
+
+Molecule Input
+--------------
+charge = 0
+spin projection = 0
+units = bohr
+H     0.0  0.0  0.7
+H     0.0  0.0  -0.7
+
+Number of Atoms:  2
+Number of Ghost Centres: 0
+Number of Point Charges: 0
+Number of Bare Nuclei  : 0
+
+
+Basis Input
+-----------
+@Basis
+type = GAO
+@Orbital Basis
+orbital basis = aug-cc-pVDZ
+contraction type = contracted 
+
+
+Molecular Geometry Analysis
+---------------------------
+
+*) Symmetry Analysis 
+---------------------
+ 
+Point Group Found:
+   Dinfd: { E, Cinf, i }
+
+All Matching Point Groups:
+
+ Point Group | N Missing El. | N Extra El. | Total Error 
+---------------------------------------------------------
+    Dinfd    |       0       |      0      |  0.00000000 
+    Cinfv    |       0       |      1      |  0.00000000 
+    Ci       |       0       |      1      |  0.00000000 
+    C1       |       0       |      2      |  0.00000000 
+
+*) Symmetry Analysis In The Presence Of A Magnetic Field
+--------------------------------------------------------
+ 
+Point Group Found:
+   Dinfd: { E, Cinf, i }
+
+All Matching Point Groups:
+
+ Point Group | N Missing El. | N Extra El. | Total Error 
+---------------------------------------------------------
+    Dinfd    |       0       |      0      |  0.00000000 
+    Cinfv    |       0       |      1      |  0.00000000 
+    Ci       |       0       |      1      |  0.00000000 
+    C1       |       0       |      2      |  0.00000000 
+
+*) Bond Analysis 
+-----------------
+ 
+Bond Lengths (Bohr):
+      Atoms                Species          Distance
+      2 -  1               H  - H              1.400
+ 
+Bond Angles (Degrees):
+      Atoms                Species             Angle
+ 
+Out-Of-Plane Angles (Degrees):
+      Atoms                Species             Angle
+ 
+Generalised Out-Of-Plane Angles (Degrees):
+      Atoms                Species             Angle
+ 
+Bond Torsion Angles (Degrees):
+      Atoms                Species             Angle
+
+*) Rotational Analysis 
+-----------------------
+ 
+Center Of Mass (Bohr):
+                  x              y              z
+           0.000000       0.000000       0.000000
+ 
+Moment Of Inertia Tensor (Mu*Bohr^2):
+                  x              y              z
+ x         0.987782       0.000000       0.000000
+ y         0.000000       0.987782       0.000000
+ z         0.000000       0.000000       0.000000
+ 
+Principle MoIs (Mu*Bohr^2):
+                 Ia             Ib             Ic
+           0.000000       0.987782       0.987782
+ 
+Rotational Constants:
+                  A              B              C
+MHz             inf  1827064.112411  1827064.112411
+cm-1            inf      60.944392      60.944392
+ 
+Rotational Type:  Linear Molecule
+
+Orbital Basis Set 
+------------------
+Basis Type: Contracted Spherical
+
+Atom    Number    Charge    NPrm    NCnt     Functions
+----    ------    ------    ----    ----    ------------
+H            2      1.00      22      18    [10s4p|6s4p]
+-----   ------    ------    ----    ----
+Total        2      1.00      22      18
+ 
+
+Nuclear-Nuclear Repulsion
+-------------------------
+E_nn :       0.714285714286
+
+LAO Molecular Integral Evaluation
+---------------------------------
+   ***** Shell Pair Report *****   
+Type            NTot            NSig
+ SS              144             144
+ PS               96              96
+ PP               16              16
+
+No. of Overlap Integrals           :             324
+No. of Kinetic Energy Integrals    :             324
+No. of Nuclear Attraction Integrals:             648
+No. of Electron Repulsion Integrals:          104976
+No. of ERIs Screened By Schwarz Inq:               0
+     
+LAO ShellPair Calculation Time     :           0.302
+LAO One-Electron Integral Time     :           0.057
+LAO Two-Electron Integral Time     :           0.187
+
+DIIS SCF Optimization
+---------------------
+DIIS Algorithm: LAO C1-DIIS [8]               
+DIIS Max. Dimensions:        8
+DIIS Max. Iterations:      200
+
+No. Electrons:     2.00000
+
+Basis     Iter                   Energy           ||FDS-SDF||    N-DIIS         Time
+ (S)         1          -0.842143682914        0.366855170950         2       0.003s
+ (S)         2          -1.122063043570        0.073720201324         3       0.002s
+ (S)         3          -1.123537015018        0.004528413007         4       0.002s
+ (S)         4          -1.123542217880        0.000893097951         5       0.002s
+ (S)         5          -1.123542513459        0.000046571552         6       0.002s
+ (S)         6          -1.123542514147        0.000001468669         7       0.002s
+ (S)         7          -1.123542514148        0.000000138982         8       0.002s
+
+------- LAO-SCF Converged! -------
+
+Final Molecular Orbitals
+------------------------
+ 
+Frontier Eigenvalues: 
+ 
+          HOMO Energy (a.u.):    -0.58868
+          LUMO Energy (a.u.):     0.09126
+                                ---------
+        HOMO-LUMO Gap (a.u.):     0.67994
+ 
+Molecular Orbitals: 
+ 
+-- Occupied and Lowest 5 virtual orbitals
+ 
+--------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+---------        Re.        Im.        Re.        Im.        Re.        Im.        Re.        Im.        Re.        Im.
+--------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+Occ. No.     2.00000               0.00000               0.00000               0.00000               0.00000           
+Orb. Ene.   -0.58868               0.09126               0.10869               0.23944               0.24874           
+--------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+        1   -0.69289    0.00000   -0.09488   -0.00000   -0.13273   -0.00000    0.00000    0.00000    0.27532    0.00000
+        2    0.17939   -0.00000    1.65738    0.00000   -0.24079   -0.00000    0.00000   -0.00000   10.22070    0.00000
+        3   -0.00409   -0.00000   -4.25814    0.00000    0.66981    0.00000   -0.00000   -0.00000   -3.56258   -0.00000
+        4    0.00000   -0.00000    0.00000    0.00000   -0.00000    0.00000   -0.00393    0.00574    0.00000   -0.00000
+        5   -0.00000   -0.00000    0.00000    0.00000    0.00000    0.00000    0.00574    0.00393    0.00000   -0.00000
+        6    0.02210   -0.00000   -0.00225   -0.00000    0.01057    0.00000    0.00000    0.00000    0.04467    0.00000
+        7    0.00000    0.00000   -0.00000   -0.00000    0.00000    0.00000    0.20831   -0.30412   -0.00000    0.00000
+        8    0.00000    0.00000   -0.00000    0.00000    0.00000    0.00000   -0.30412   -0.20831    0.00000    0.00000
+        9    0.00034   -0.00000   -0.41836   -0.00000   -0.01639   -0.00000   -0.00000   -0.00000   -2.08809    0.00000
+       10   -0.69289    0.00000    0.09488    0.00000   -0.13273   -0.00000   -0.00000    0.00000   -0.27532   -0.00000
+       11    0.17939   -0.00000   -1.65738   -0.00000   -0.24079   -0.00000   -0.00000   -0.00000  -10.22070   -0.00000
+       12   -0.00409   -0.00000    4.25814   -0.00000    0.66981    0.00000    0.00000    0.00000    3.56258    0.00000
+       13    0.00000    0.00000   -0.00000   -0.00000    0.00000   -0.00000   -0.00393    0.00574   -0.00000   -0.00000
+       14   -0.00000    0.00000   -0.00000    0.00000    0.00000   -0.00000    0.00574    0.00393   -0.00000    0.00000
+       15   -0.02210    0.00000   -0.00225   -0.00000   -0.01057   -0.00000    0.00000   -0.00000    0.04467    0.00000
+       16   -0.00000   -0.00000    0.00000    0.00000   -0.00000   -0.00000    0.20831   -0.30412    0.00000    0.00000
+       17   -0.00000   -0.00000    0.00000   -0.00000   -0.00000   -0.00000   -0.30412   -0.20831    0.00000    0.00000
+       18   -0.00034    0.00000   -0.41836   -0.00000    0.01639    0.00000   -0.00000    0.00000   -2.08809    0.00000
+---------  ---------- ---------- 
+---------         Re.        Im. 
+---------  ---------- ---------- 
+Occ. No.      0.00000           
+Orb. Ene.     0.35696           
+---------  ---------- ---------- 
+        1     0.00000    0.00000
+        2    -0.00000   -0.00000
+        3    -0.00000   -0.00000
+        4     0.00379    0.00583
+        5    -0.00583    0.00379
+        6    -0.00000   -0.00000
+        7    -0.20066   -0.30922
+        8     0.30922   -0.20066
+        9     0.00000    0.00000
+       10    -0.00000    0.00000
+       11     0.00000   -0.00000
+       12     0.00000    0.00000
+       13     0.00379    0.00583
+       14    -0.00583    0.00379
+       15    -0.00000   -0.00000
+       16    -0.20066   -0.30922
+       17     0.30922   -0.20066
+       18     0.00000   -0.00000
+
+Final Energies
+--------------
+Component                 Value
+
+E_nn             0.714285714286
+T_s              1.109091900745 
+E_ne            -3.607387272024 
+E_J              1.320934285690 
+E_X             -0.660467142845 
+E_XC             0.000000000000
+E_el            -1.837828228434
+E_disp           0.000000000000
+E_tot           -1.123542514148
+
+Molecular Dipole Moment
+-----------------------
+@DIP x      0.000000000000
+@DIP y     -0.000000000000
+@DIP z     -0.000000000000
+
+Execution Summary
+-----------------
+Calculation Ended on: Sun, 03 Oct 2021 23:05:30
+Total Execution Time:         5.37 sec.

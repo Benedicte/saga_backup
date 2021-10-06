@@ -1,0 +1,18 @@
+@QUEST
+method = SCF 
+spin constraint = Restricted
+mkl threads = 1
+@Integrals
+one elec integrals = fast
+eri integrals = fast
+basis set = spherical
+ene_conv = 1.0e-20
+@SCF
+guess type = SAD
+diis type = C1-DIIS
+@London
+#origin = (0.0,0.0,0.0) 
+field = (0.117525878379355,0.0,0.0)
+archive
+@Property
+Dipole
